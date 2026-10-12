@@ -470,6 +470,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1475953266807527688, guid: dedf6d6f534409e40b59d853300c7d70, type: 3}
   m_PrefabInstance: {fileID: 2084146846}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1462022004 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2750308435667218172, guid: dedf6d6f534409e40b59d853300c7d70, type: 3}
+  m_PrefabInstance: {fileID: 2084146846}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1547493886
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,7 +488,7 @@ GameObject:
   - component: {fileID: 1547493888}
   - component: {fileID: 1547493887}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -536,7 +541,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b4bdbbc689e22df49b5cb3a26302b51c, type: 2}
+  - {fileID: 2100000, guid: 23f47e09d11dcb44994a1f7a252efa84, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -592,6 +597,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1030246341}
     m_Modifications:
     - target: {fileID: 1788916262124466435, guid: dedf6d6f534409e40b59d853300c7d70, type: 3}
+      propertyPath: _mastPivot
+      value: 
+      objectReference: {fileID: 1462022004}
+    - target: {fileID: 1788916262124466435, guid: dedf6d6f534409e40b59d853300c7d70, type: 3}
       propertyPath: _sailOpenSpeed
       value: 50
       objectReference: {fileID: 0}
@@ -599,6 +608,10 @@ PrefabInstance:
       propertyPath: _sailScalePivot
       value: 
       objectReference: {fileID: 1320184358}
+    - target: {fileID: 1788916262124466435, guid: dedf6d6f534409e40b59d853300c7d70, type: 3}
+      propertyPath: _maxSailRotation
+      value: 45
+      objectReference: {fileID: 0}
     - target: {fileID: 1788916262124466435, guid: dedf6d6f534409e40b59d853300c7d70, type: 3}
       propertyPath: _adjustSailAction
       value: 
@@ -608,7 +621,19 @@ PrefabInstance:
       value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1788916262124466435, guid: dedf6d6f534409e40b59d853300c7d70, type: 3}
+      propertyPath: _adjustSailFurling
+      value: 
+      objectReference: {fileID: -7604793933974398645, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    - target: {fileID: 1788916262124466435, guid: dedf6d6f534409e40b59d853300c7d70, type: 3}
+      propertyPath: _adjustSailRotation
+      value: 
+      objectReference: {fileID: 7943463497323199780, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    - target: {fileID: 1788916262124466435, guid: dedf6d6f534409e40b59d853300c7d70, type: 3}
       propertyPath: _sailOpennessPercent
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788916262124466435, guid: dedf6d6f534409e40b59d853300c7d70, type: 3}
+      propertyPath: _startingSailOpenness
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1788916262124466435, guid: dedf6d6f534409e40b59d853300c7d70, type: 3}

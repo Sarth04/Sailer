@@ -97,13 +97,23 @@
                     "priority": 0
                 },
                 {
-                    "name": "AdjustSail",
+                    "name": "SailFurling",
                     "type": "Value",
                     "id": "b969b157-c6d6-4927-9192-8b0fc516b8af",
                     "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true,
+                    "priority": 0
+                },
+                {
+                    "name": "SailRotation",
+                    "type": "Button",
+                    "id": "e8d3b42f-cb39-4dda-9a61-56bb7d4f0b5d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
                     "priority": 0
                 }
             ],
@@ -500,7 +510,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "AdjustSail",
+                    "action": "SailFurling",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -511,7 +521,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "AdjustSail",
+                    "action": "SailFurling",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -522,7 +532,40 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "AdjustSail",
+                    "action": "SailFurling",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "adc9c7f1-74bd-4264-a20e-a3b1a4cc335f",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SailRotation",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "a522f613-7a10-43e3-baa6-bcc493290712",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "SailRotation",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "5ba0452f-d3b3-46a6-8314-209e334d2c52",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "SailRotation",
                     "isComposite": false,
                     "isPartOfComposite": true
                 }
