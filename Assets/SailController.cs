@@ -13,10 +13,13 @@ public sealed class SailController : MonoBehaviour
     [SerializeField, Min(0f)] private float _sailOpenSpeed = 60f;
     [SerializeField, Min(0f)] private float _sailRotationSpeed = 30f;
 
-    private Vector3 _startingSailScale;
     private Quaternion _startingMastRotation;
+    private Vector3 _startingSailScale;
     private float _sailOpenness;
     private float _sailRotation;
+    public float SailOpenness => _sailOpenness;
+    public float SailRotation => _sailRotation;
+    public Transform MastPivot => _mastPivot;
 
     private void Start()
     {
@@ -100,12 +103,13 @@ public sealed class SailController : MonoBehaviour
     private void UpdateSailScale()
     {
         Vector3 scale = _startingSailScale;
-        scale.y = scale.y * Mathf.Lerp(_minimumClosedSailScale, 1f, _sailOpenness / 100f);
+        scale.y = Mathf.Lerp(_minimumClosedSailScale, 1f, _sailOpenness / 100f);
         _sailScalePivot.localScale = scale;
     }
 
     private void UpdateSailRotation()
     {
-        _mastPivot.localRotation = _startingMastRotation * Quaternion.AngleAxis(_sailRotation, Vector3.up);
+        _mastPivot.localRotation =
+            _startingMastRotation * Quaternion.AngleAxis(_sailRotation, Vector3.up);
     }
 }
